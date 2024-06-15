@@ -1,0 +1,399 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{778A032D-BBE5-424C-934A-7D01E06DF2D1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Projeto_Venda</RootNamespace>
+    <AssemblyName>Projeto_Venda</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="conexao\ConectaBanco.cs" />
+    <Compile Include="controller\C_Acesso.cs" />
+    <Compile Include="controller\C_Bairro.cs" />
+    <Compile Include="controller\C_Cep.cs" />
+    <Compile Include="controller\C_Cidade.cs" />
+    <Compile Include="controller\C_Cliente.cs" />
+    <Compile Include="controller\C_Funcao.cs" />
+    <Compile Include="controller\C_Funcionario.cs" />
+    <Compile Include="controller\C_ItensTelefoneCliente.cs" />
+    <Compile Include="controller\C_Logins.cs" />
+    <Compile Include="controller\C_Loja.cs" />
+    <Compile Include="controller\C_Marca.cs" />
+    <Compile Include="controller\C_Operadora.cs" />
+    <Compile Include="controller\C_Rua.cs" />
+    <Compile Include="controller\C_Sexo.cs" />
+    <Compile Include="controller\C_Situacao.cs" />
+    <Compile Include="controller\C_Telefone.cs" />
+    <Compile Include="controller\C_Tipo.cs" />
+    <Compile Include="controller\C_Trabalho.cs" />
+    <Compile Include="controller\C_Uf.cs" />
+    <Compile Include="controller\I_CRUD.cs" />
+    <Compile Include="FrmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPrincipal.Designer.cs">
+      <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="model\Acesso.cs" />
+    <Compile Include="model\Bairro.cs" />
+    <Compile Include="model\Cep.cs" />
+    <Compile Include="model\Cidade.cs" />
+    <Compile Include="model\Cliente.cs" />
+    <Compile Include="model\ControleLoginsSistema.cs" />
+    <Compile Include="model\Funcao.cs" />
+    <Compile Include="model\Funcionario.cs" />
+    <Compile Include="model\ItensTelefoneCliente.cs" />
+    <Compile Include="model\Logins.cs" />
+    <Compile Include="model\Loja.cs" />
+    <Compile Include="model\Marca.cs" />
+    <Compile Include="model\Operadora.cs" />
+    <Compile Include="model\Rua.cs" />
+    <Compile Include="model\Sexo.cs" />
+    <Compile Include="model\Situacao.cs" />
+    <Compile Include="model\Telefone.cs" />
+    <Compile Include="model\Tipo.cs" />
+    <Compile Include="model\Trabalho.cs" />
+    <Compile Include="model\Uf.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="view\frmAcesso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\frmAcesso.Designer.cs">
+      <DependentUpon>frmAcesso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\frmBairro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\frmBairro.Designer.cs">
+      <DependentUpon>frmBairro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\frmCadastroCidades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\frmCadastroCidades.Designer.cs">
+      <DependentUpon>frmCadastroCidades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\frmCep.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\frmCep.Designer.cs">
+      <DependentUpon>frmCep.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\frmCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\frmCliente.Designer.cs">
+      <DependentUpon>frmCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\frmFuncao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\frmFuncao.Designer.cs">
+      <DependentUpon>frmFuncao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\frmFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\frmFuncionario.Designer.cs">
+      <DependentUpon>frmFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\frmItensTelefoneCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\frmItensTelefoneCliente.Designer.cs">
+      <DependentUpon>frmItensTelefoneCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\frmLogins.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\frmLogins.Designer.cs">
+      <DependentUpon>frmLogins.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\frmLoja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\frmLoja.Designer.cs">
+      <DependentUpon>frmLoja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\frmMarca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\frmMarca.Designer.cs">
+      <DependentUpon>frmMarca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\frmOperadora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\frmOperadora.Designer.cs">
+      <DependentUpon>frmOperadora.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\frmRua.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\frmRua.Designer.cs">
+      <DependentUpon>frmRua.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\frmSexo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\frmSexo.Designer.cs">
+      <DependentUpon>frmSexo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\frmSituacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\frmSituacao.Designer.cs">
+      <DependentUpon>frmSituacao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\frmTelefone.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\frmTelefone.Designer.cs">
+      <DependentUpon>frmTelefone.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\frmTipo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\frmTipo.Designer.cs">
+      <DependentUpon>frmTipo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\frmTrabalho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\frmTrabalho.Designer.cs">
+      <DependentUpon>frmTrabalho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\frmUf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\frmUf.Designer.cs">
+      <DependentUpon>frmUf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\rltAcesso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\rltAcesso.Designer.cs">
+      <DependentUpon>rltAcesso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\rltCadastroCidade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\rltCadastroCidade.Designer.cs">
+      <DependentUpon>rltCadastroCidade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\rltCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\rltCliente.Designer.cs">
+      <DependentUpon>rltCliente.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FrmPrincipal.resx">
+      <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="relatorios\relatorioAcesso.rdlc" />
+    <EmbeddedResource Include="relatorios\relatorioCidade.rdlc" />
+    <EmbeddedResource Include="relatorios\relatorioCliente.rdlc" />
+    <EmbeddedResource Include="relatorios\Report1.rdlc" />
+    <EmbeddedResource Include="view\frmAcesso.resx">
+      <DependentUpon>frmAcesso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\frmBairro.resx">
+      <DependentUpon>frmBairro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\frmCadastroCidades.resx">
+      <DependentUpon>frmCadastroCidades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\frmCep.resx">
+      <DependentUpon>frmCep.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\frmCliente.resx">
+      <DependentUpon>frmCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\frmFuncao.resx">
+      <DependentUpon>frmFuncao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\frmFuncionario.resx">
+      <DependentUpon>frmFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\frmItensTelefoneCliente.resx">
+      <DependentUpon>frmItensTelefoneCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\frmLogins.resx">
+      <DependentUpon>frmLogins.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\frmLoja.resx">
+      <DependentUpon>frmLoja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\frmMarca.resx">
+      <DependentUpon>frmMarca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\frmOperadora.resx">
+      <DependentUpon>frmOperadora.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\frmRua.resx">
+      <DependentUpon>frmRua.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\frmSexo.resx">
+      <DependentUpon>frmSexo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\frmSituacao.resx">
+      <DependentUpon>frmSituacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\frmTelefone.resx">
+      <DependentUpon>frmTelefone.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\frmTipo.resx">
+      <DependentUpon>frmTipo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\frmTrabalho.resx">
+      <DependentUpon>frmTrabalho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\frmUf.resx">
+      <DependentUpon>frmUf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\rltAcesso.resx">
+      <DependentUpon>rltAcesso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\rltCadastroCidade.resx">
+      <DependentUpon>rltCadastroCidade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\rltCliente.resx">
+      <DependentUpon>rltCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\Projeto_Venda_2023.model.Acesso.datasource" />
+    <None Include="Properties\DataSources\Projeto_Venda_2023.model.Cidade.datasource" />
+    <None Include="Properties\DataSources\Projeto_Venda_2023.model.Cliente.datasource" />
+    <None Include="Properties\DataSources\Projeto_Venda_2023.model.Uf.datasource" />
+    <None Include="Properties\DataSources\Projeto_Venda_2023.view.frmAcesso.datasource" />
+    <None Include="Properties\DataSources\Projeto_Venda_2023.view.frmCadastroCidades.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.8 %28x86 e x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
